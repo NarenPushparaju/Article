@@ -1,5 +1,6 @@
-class ArticleController < ApplicationController
-  def show
+#$i=0
+class ArticlesController < ApplicationController
+  def index
     @article = Article.all
   end
 
@@ -7,20 +8,30 @@ class ArticleController < ApplicationController
     @article = Article.new
   end
 
-  def set
-    @article = Article.find(params[:title])
+  def show
+    @article = Article.find(params[:id])
   end
 
   def create
+
     @article = Article.new(article_params)
     @article.save
-    redirect_to article_show_path(@article)
+    #if $i>4
+    redirect_to articles_path
+    #else
+     # $i+=1
+     # redirect_to new_article_path
+     # end
   end
 
   private
 
   def article_params
     params.require(:article).permit(:title, :description)
+  end
+
+  def edit
+
   end
 
 end
