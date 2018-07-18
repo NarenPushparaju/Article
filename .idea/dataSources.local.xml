@@ -7,5 +7,8 @@
     <data-source name="development [2]" uuid="d295074f-09ba-4abb-925f-4591e74d7e8d">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
     </data-source>
+    <data-source name="development [3]" uuid="833205dd-be73-43d8-92cf-f8ecc9ba2d54">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
   </component>
 </project>

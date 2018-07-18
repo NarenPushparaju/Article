@@ -3,19 +3,25 @@
   <head>
     <title>ArticleApp</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <h1>Naren</h1>
-  <a href="https://www.railstutorial.org/book" >STUDY ABOUT RAILS</a>
-  <<img src="https://drive.google.com/open?id=1bNUcq6ZeZzlvFQA1G9--o_9EFpuJScaM" alt="Naren" width="75" height="75">
   <body>
+  <div class="container-fluid ">
+    <div class="jumbotron jumbotron-fluid">
+      <%=render "layouts/navbar" %>
+        <a href="https://www.railstutorial.org/book" >STUDY ABOUT RAILS</a>
+ <img src="https://drive.google.com/open?id=1bNUcq6ZeZzlvFQA1G9--o_9EFpuJScaM"  width="75" height="75">
   <% flash.each do |name,msg|  %>
-  <ul>
-    <li><%= msg %></li>
+ <ul>
+<li><%= msg %></li>
   </ul>
     <% end %>
     <%= yield %>
+    </div>
+    </div>
   </body>
 </html>
